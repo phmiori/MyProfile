@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pedro Henrique Miori | Web Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Pedro Henrique Miori</h1>
+      <ul>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Oi, eu sou Pedro Henrique Miori</h2>
+      <p>Desenvolvedor Web</p>
+      <a href="#contact" class="btn">Entre em Contato</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Sobre Mim</h2>
+    <div class="about-container">
+      <img src="WhatsApp Image 2025-04-10 at 21.48.58.jpeg" alt="Foto de Pedro Henrique Miori" class="profile-pic" />
+      <div>
+        <p>Sou um desenvolvedor web adoro criar sites modernos, responsivos e eficientes. Tenho conhecimentos sólidos em HTML, CSS e JavaScript, e estou sempre aprendendo novas tecnologias.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="projects">
+    <h2>Projetos</h2>
+    <div class="project-list">
+      <div class="project-card"><img src="1.jpeg" alt="1"></div>
+      <div class="project-card"><img src="2.jpeg" alt="2"></div>
+      <div class="project-card"><img src="3.jpeg" alt="3"></div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagem em alta resolução">
+      </div>
+  </section>
+
+  <section id="services">
+    <h2>Serviços</h2>
+    <div class="service-list">
+      <div class="service-card">
+        <h3>Desenvolvimento Web</h3>
+        <p>Criação de sites modernos, rápidos e otimizados.</p>
+      </div>
+      <div class="service-card">
+        <h3>Design Responsivo</h3>
+        <p>Sites que funcionam em todos os dispositivos.</p>
+      </div>
+      <div class="service-card">
+        <h3>Otimização</h3>
+        <p>Melhor desempenho e SEO para seu site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contato</h2>
+    <div class="contact-info">
+      <p><strong>📞 Telefone:</strong> (19) 99687-6918</p>
+      <p><strong>📧 Email:</strong> pedrohenrique.miori@gmail.com</p>
+      <p><strong>📸 Instagram:</strong> <a href="https://www.instagram.com/mioriiii/profilecard/?igsh=eGlpYmduZHF0YWpw" target="_blank">@mioriiii</a></p>
+      <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/pedro-henrique-miori-a21609309/" target="_blank">LinkedIn</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Pedro Henrique Miori. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".lightbox .close");
+  
+    document.querySelectorAll(".project-card img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+      });
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  </script>
+  
+</body>
+</html>
